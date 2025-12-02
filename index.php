@@ -1,8 +1,16 @@
-<?php 
+<?php
 
 require 'functions.php';
 
-$title = 'Home';
+$uri = $_SERVER['REQUEST_URI'];
 
-
-require 'views/index.view.php';
+if ($uri === '/') {
+    require 'controllers/index.php';
+} else if ($uri === '/about') {
+    require 'controllers/about.php';
+} else if ($uri === '/contact') {
+    require 'controllers/contact.php';
+} else {
+    http_response_code(404);
+    echo '404 Not Found';
+}
