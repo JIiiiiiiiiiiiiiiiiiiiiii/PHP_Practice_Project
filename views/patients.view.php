@@ -1,0 +1,26 @@
+<?php require __DIR__ . '/partials/head.php'; ?>
+
+<?php require __DIR__ . '/partials/nav.php'; ?>
+
+<?php require __DIR__ . '/partials/banner.php'; ?>
+
+<main>
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <!-- Your content -->
+        <ul>
+            <?php foreach($patients as $patient) : ?>
+            <li>
+                <a href="/patient?id=<?= $patient['id'] ?>" class="text-blue-500 hover:underline">
+                    <?= $patient['name']?>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <p class="mt-6">
+            <a href="/patient/create" class="text-blue-500 hover:underline">Create patient</a>
+        </p>
+    </div>
+</main>
+
+<?php require __DIR__ . '/partials/footer.php'; ?>
