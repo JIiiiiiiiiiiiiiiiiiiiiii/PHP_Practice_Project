@@ -12,4 +12,4 @@ $patient = $db->query('SELECT * FROM patients where id = :id', [
 
 authorize($patient['user_id'] === $current_user);
 
-require 'views/patient.view.php'; 
+require 'views/patients/show.view.php'; 

@@ -1,8 +1,8 @@
-<?php require __DIR__ . '/partials/head.php'; ?>
+<?php require __DIR__ . '/view/partials/head.php'; ?>
 
-<?php require __DIR__ . '/partials/nav.php'; ?>
+<?php require __DIR__ . '/../partials/nav.php'; ?>
 
-<?php require __DIR__ . '/partials/banner.php'; ?>
+<?php require __DIR__ . '/../partials/banner.php'; ?>
 
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -11,7 +11,7 @@
             <?php foreach($patients as $patient) : ?>
             <li>
                 <a href="/patient?id=<?= $patient['id'] ?>" class="text-blue-500 hover:underline">
-                    <?= $patient['name']?>
+                    <?= htmlspecialchars($patient['name'])?>
                 </a>
             </li>
             <?php endforeach; ?>
@@ -23,4 +23,4 @@
     </div>
 </main>
 
-<?php require __DIR__ . '/partials/footer.php'; ?>
+<?php require __DIR__ . '/../partials/footer.php'; ?>
