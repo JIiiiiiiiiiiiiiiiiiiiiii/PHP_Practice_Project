@@ -1,9 +1,9 @@
 <?php 
 
+use Core\App;
 use Core\Database;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $patients = $db->query('SELECT * FROM patients where user_id = 3')->all();
 
