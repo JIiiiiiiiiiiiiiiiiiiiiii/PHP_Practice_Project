@@ -13,3 +13,6 @@ $router->patch('/patient', 'controllers/patients/update.php');
 
 $router->get('/patients/create', 'controllers/patients/create.php');
 $router->post('/patients', 'controllers/patients/store.php');
+
+$router->get('/register', 'controllers/register/create.php');
+$router->post('/register', 'controllers/register/store.php');
