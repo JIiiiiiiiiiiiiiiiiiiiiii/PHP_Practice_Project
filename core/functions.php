@@ -1,5 +1,7 @@
 <?php
 
+use Core\Response;
+
 // Utility function to dump and die
 function dd($value) {
     echo "<pre>";
