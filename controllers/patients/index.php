@@ -7,7 +7,7 @@ $db = new Database($config['database']);
 
 $patients = $db->query('SELECT * FROM patients where user_id = 3')->all();
 
-require view('patients/index.view.php', [
+view('patients/index.view.php', [
     'title' => 'Patients',
     'patients' => $patients
 ]);

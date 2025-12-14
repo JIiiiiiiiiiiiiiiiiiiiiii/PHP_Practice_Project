@@ -1,5 +1,5 @@
 <?php 
 
-require view('contact.view.php', [
+view('contact.view.php', [
     'title' => 'Contact'
 ]);

@@ -18,7 +18,7 @@
         </ul>
 
         <p class="mt-6">
-            <a href="/patient/create" class="text-blue-500 hover:underline">Create patient</a>
+            <a href="/patients/create" class="text-blue-500 hover:underline">Create patient</a>
         </p>
     </div>
 </main>

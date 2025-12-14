@@ -9,7 +9,7 @@
         <!-- Your content -->
         <a href="/patients" class="text-blue-500 hover:underline mb-6 inline-block">Go back</a> <br>
         <h1 class="text-3xl font-bold mb-6">Create New Patient</h1>
-        <form action="" method="POST">
+        <form action="/patients" method="POST">
             <div class="space-y-12">
                 <div class="border-b border-gray-900/10 pb-12">
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">

@@ -15,6 +15,15 @@ function urlIs($value) {
     return $_SERVER['REQUEST_URI'] === $value;
 }
 
+function abort($status = 404) {
+    http_response_code($status);
+
+    // load the magic view fie
+    require base_path("views/{$status}.view.php");
+
+    die();
+}
+
 function authorize($condition, $status = Response::FORBIDDEN) {
     if(!$condition) {
         abort($status);
