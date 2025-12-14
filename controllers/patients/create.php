@@ -1,15 +1,11 @@
 <?php
 
-require 'Validator.php';
-
-$config = require 'config.php';
+$config = require base_path('config.php');
 $db = new Database($config['database']);
 
-$title = 'Create Patient';
+$errors = [];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $errors = [];
-
     if(!Validator::string($_POST['name'], 1, 255)) {
         $errors['name'] = 'Name must be between 1 and 255 characters long';
     }
@@ -29,4 +25,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
 
 
-require 'views/patients/create.view.php';
+require view('patients/create.view.php', [
+    'title' => 'Create Patients',
+    'errors' => $errors
+]);

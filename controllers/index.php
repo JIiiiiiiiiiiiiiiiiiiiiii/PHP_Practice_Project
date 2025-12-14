@@ -1,5 +1,5 @@
 <?php 
 
-$title = 'Home';
-
-require 'views/index.view.php';
+require view('index.view.php', [
+    'title' => 'Home'
+]);
