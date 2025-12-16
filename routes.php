@@ -15,4 +15,8 @@ $router->get('/patients/create', 'controllers/patients/create.php');
 $router->post('/patients', 'controllers/patients/store.php');
 
 $router->get('/register', 'controllers/register/create.php')->only('guest');
-$router->post('/register', 'controllers/register/store.php');
+$router->post('/register', 'controllers/register/store.php')->only('guest');
+
+$router->get('/login', 'controllers/sessions/create.php')->only('guest');
+$router->post('/sessions', 'controllers/sessions/store.php')->only('guest');
+$router->delete('/sessions', 'controllers/sessions/destroy.php')->only('auth');
